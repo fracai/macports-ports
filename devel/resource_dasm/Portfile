@@ -9,14 +9,14 @@ PortGroup               legacysupport 1.1
 # MAP_ANONYMOUS
 legacysupport.newest_darwin_requires_legacy 14
 
-github.setup            fuzziqersoftware resource_dasm 46ad32e
+github.setup            fuzziqersoftware resource_dasm 926182a
 github.tarball_from     archive
 
 # blacklisting to select C++20 capable compilers
 compiler.blacklist-append {clang < 1300}
 compiler.cxx_standard   2020
 
-version                 2023.03.15
+version                 2024.11.11
 revision                0
 categories              devel
 maintainers             {alum.wpi.edu:arno+macports @fracai} openmaintainer
@@ -25,14 +25,12 @@ license                 MIT
 description             Tools for reverse-engineering classic Mac OS applications and games.
 long_description        {*}${description}
 
-checksums               rmd160  190a5eb9a174d8eafdc17ca736f730e2d12862ec \
-                        sha256  db5e42d9ef9df9d4d40f42fd7c1b67cc2f5108a06e30ae983fd6e40046ad22e0 \
-                        size    457269
+checksums               rmd160  4780cad1e48c748dfe393bfb43d8df23d5c0c555 \
+                        sha256  ca8e7a5cefa37708bf735801267fa5f2ba294e96d776a177eee3494be51b6a34 \
+                        size    537665
 
 set pyver               3.11
 set python_version      [string index ${pyver} 0][string range ${pyver} 2 end]
-
-patchfiles              CMakeLists-txt.diff
 
 depends_build-append    port:python${python_version}
 depends_lib-append      port:phosg \
