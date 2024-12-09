@@ -5,14 +5,14 @@ PortGroup               cmake 1.1
 PortGroup               github 1.0
 PortGroup               compiler_blacklist_versions 1.0
 
-github.setup            fuzziqersoftware phosg e1bd000
+github.setup            fuzziqersoftware phosg 5568c0a
 github.tarball_from     archive
 
 # blacklisting to select C++20 capable compilers
 compiler.blacklist-append {clang < 1300}
 compiler.cxx_standard   2020
 
-version                 2023.03.04
+version                 2024.11.18
 revision                0
 categories              devel
 maintainers             {alum.wpi.edu:arno+macports @fracai} openmaintainer
@@ -21,9 +21,9 @@ license                 MIT
 description             Phosg is a basic C++ wrapper library around some common C routines.
 long_description        {*}${description}
 
-checksums               rmd160  526fb52a0eadbb3e33da6e2711c4c43afca04eda \
-                        sha256  802170acf4b8bae5383183c9361812d5309cb3e79d703e365b96feffe5d776cd \
-                        size    147998
+checksums               rmd160  9c0eb9ab5f25ac9a3bae2c81927ce5f8b22a47a2 \
+                        sha256  e8a06c4c30212826821ba5aaf7f26f59b39aebfe6a9649258854cc62c5a7a25c \
+                        size    164360
 
 set pyver               3.11
 set python_version      [string index ${pyver} 0][string range ${pyver} 2 end]

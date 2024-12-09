@@ -1,10 +1,11 @@
 --- CMakeLists.txt.orig
 +++ CMakeLists.txt
-@@ -71,5 +71,5 @@
- install(TARGETS jsonformat DESTINATION bin)
- install(TARGETS parse-data DESTINATION bin)
- install(FILES ${Headers} DESTINATION include/phosg)
--install(FILES phosg-config.cmake DESTINATION lib)
--install(EXPORT phosg DESTINATION lib)
-+install(FILES phosg-config.cmake DESTINATION lib/cmake/phosg)
-+install(EXPORT phosg DESTINATION lib/cmake/phosg)
+@@ -5,8 +5,6 @@ cmake_minimum_required(VERSION 3.22)
+ 
+ # Project setup
+ 
+-set(CMAKE_OSX_ARCHITECTURES arm64;x86_64)
+-
+ project(phosg)
+ include(GNUInstallDirs)
+ include(CMakePackageConfigHelpers)
